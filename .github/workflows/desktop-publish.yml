@@ -1,0 +1,22 @@
+
+name: Build and create package
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+        source-url: https://nuget.pkg.github.com/SephDB/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - run: dotnet build FmodForFoxes/FmodForFoxes/FmodForFoxes.csproj --configuration Release
+    - run: dotnet build FmodForFoxes/FmodForFoxes.Desktop/FmodForFoxes.Desktop.csproj --configuration Release
+    - name: Publish the package to GPR
+      run: dotnet nuget push FmodForFoxes/package/*.nupkg
