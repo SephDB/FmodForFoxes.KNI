@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<NoWarn>1591;1573</NoWarn>
 		<DefineConstants>UNITY_2017_4_OR_NEWER</DefineConstants>
 		<DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
@@ -11,6 +11,7 @@
 		<OutputPath>..\..\bin\$(Configuration)</OutputPath>
 		<AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageId>FmodForFoxes.KNI.Desktop</PackageId>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -31,7 +32,7 @@
 		</Content>
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="nkast.Xna.Framework" Version="3.14.9001" PrivateAssets="all" />
+		<PackageReference Include="nkast.Xna.Framework" Version="4.0.9001" PrivateAssets="all" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\FmodForFoxes\FmodForFoxes.csproj" />

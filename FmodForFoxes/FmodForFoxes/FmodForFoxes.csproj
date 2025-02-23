@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackageTags>Monogame, FMOD, Audio, Music, ChaiFoxes.FMODAudio</PackageTags>
@@ -9,6 +9,7 @@
 		<OutputPath>..\..\bin\$(Configuration)</OutputPath>
 		<AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageId>FmodForFoxes.KNI</PackageId>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -29,8 +30,8 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="nkast.Xna.Framework" Version="3.14.9001" PrivateAssets="all" />
-		<PackageReference Include="nkast.Xna.Framework.Content" Version="3.14.9001" PrivateAssets="all"/>
+		<PackageReference Include="nkast.Xna.Framework" Version="4.0.9001" PrivateAssets="all" />
+		<PackageReference Include="nkast.Xna.Framework.Content" Version="4.0.9001" PrivateAssets="all"/>
 	</ItemGroup>
 
 </Project>
