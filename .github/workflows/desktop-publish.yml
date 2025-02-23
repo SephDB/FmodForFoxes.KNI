@@ -19,4 +19,4 @@ jobs:
     - run: dotnet build FmodForFoxes/FmodForFoxes/FmodForFoxes.csproj --configuration Release
     - run: dotnet build FmodForFoxes/FmodForFoxes.Desktop/FmodForFoxes.Desktop.csproj --configuration Release
     - name: Publish the package to GPR
-      run: dotnet nuget push FmodForFoxes/package/*.nupkg
+      run: dotnet nuget push package/*.nupkg
